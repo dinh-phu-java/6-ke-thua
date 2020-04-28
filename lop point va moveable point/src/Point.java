@@ -83,11 +83,19 @@ class MovablePoint extends Point{
         public String toString(){
             return "(x: "+super.getX()+",y: "+super.getY()+"), speed= (xs: "+this.xSpeed+",ys: "+this.ySpeed+")";
         }
+
         public MovablePoint move(MovablePoint obj){
-            float x =super.getX()+this.xSpeed;
-            float y= super.getY()+this.ySpeed;
-            obj.setX(x);
-            obj.setY(y);
+            float x= super.getX() + this.xSpeed;
+            float y= super.getY() + this.ySpeed;
+            obj.setXY(x,y);
             return obj;
         }
+
+//        public MovablePoint move(MovablePoint obj){
+//            float x =super.getX()+this.xSpeed;
+//            float y= super.getY()+this.ySpeed;
+//            obj.setX(x);
+//            obj.setY(y);
+//            return obj;
+//        }
 }
